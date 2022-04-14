@@ -4,9 +4,6 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
-  thymeleaf:
-    prefix: classpath:/src/main/resources/
-    suffix: .html
 
   #    url: jdbc:h2:tcp://localhost/~/KNUT_CLUB;
 #    username: sa

@@ -14,17 +14,19 @@ public class LoginController {
 
     private final UserService userService;
 
-    @GetMapping(value= "/login/login")
+    @GetMapping(value= "/login")
     public String gologin() {
         return "login/login";
     }
 
-    @PostMapping(value = "/login/login")
+    @PostMapping(value = "/login")
     public String dologin(@ModelAttribute User user) {
+        System.out.println(user.getStudentID());
+        System.out.println(user.getPassword());
         if(userService.login(user)) {
             return "redirect:/";
         }
-        return "login/login";
+        return "home/home";
     }
 
 
