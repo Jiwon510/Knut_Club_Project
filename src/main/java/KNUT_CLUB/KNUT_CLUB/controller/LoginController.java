@@ -26,7 +26,7 @@ public class LoginController {
         if(userService.login(user)) {
             return "redirect:/";
         }
-        return "home/home";
+        return "/";
     }
 
 

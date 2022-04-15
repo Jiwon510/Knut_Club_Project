@@ -43,6 +43,7 @@ public class UserService {
 
     public boolean login(User user) {
         User findUser = userRepository.findUser(user.getStudentID());
+        System.out.println(findUser);
 
         if(findUser == null) {
             return false;
